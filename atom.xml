@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Macondo</title>
+  
+  
+  <link href="http://buendia1024.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://buendia1024.github.io/"/>
+  <updated>2023-02-09T10:10:38.000Z</updated>
+  <id>http://buendia1024.github.io/</id>
+  
+  <author>
+    <name>Xiao Liao Liao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://buendia1024.github.io/posts/4a17b156.html"/>
+    <id>http://buendia1024.github.io/posts/4a17b156.html</id>
+    <published>2023-03-03T12:45:48.107Z</published>
+    <updated>2023-02-09T10:10:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ai绘画云端教程+指定人物训练</title>
+    <link href="http://buendia1024.github.io/posts/58eff440.html"/>
+    <id>http://buendia1024.github.io/posts/58eff440.html</id>
+    <published>2023-03-03T02:04:17.000Z</published>
+    <updated>2023-03-03T13:20:30.730Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;ai绘画爆火，对于非专业人士来说，相较于chatGPT，前者更具可玩性和可操作性。但普遍性存在以下问题：1.涉及编码/参数调整，专业门槛过高，导致非专业人员即使跟着教程也各种出错；2.个人设备显存太小，跑不动；3.绘制出的效果不尽人意；4.训练出指定人物程序复杂，需要大量实</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ai绘画； 云算力； lora模型" scheme="http://buendia1024.github.io/tags/ai%E7%BB%98%E7%94%BB%EF%BC%9B-%E4%BA%91%E7%AE%97%E5%8A%9B%EF%BC%9B-lora%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>再试一次</title>
+    <link href="http://buendia1024.github.io/posts/26082041.html"/>
+    <id>http://buendia1024.github.io/posts/26082041.html</id>
+    <published>2023-01-31T04:50:20.000Z</published>
+    <updated>2023-02-09T10:10:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;修改主题，配置主题之后，更换格言之后再试一次&lt;br&gt;一直有误，不知道哪里出问题了&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我如同夜晚盛开的烟火</title>
+    <link href="http://buendia1024.github.io/posts/e63d0e67.html"/>
+    <id>http://buendia1024.github.io/posts/e63d0e67.html</id>
+    <published>2023-01-30T13:32:08.000Z</published>
+    <updated>2023-02-09T10:10:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s3.bmp.ovh/imgs/2023/02/09/5a52ce78e3848e70.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="转载" scheme="http://buendia1024.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中文测试text</title>
+    <link href="http://buendia1024.github.io/posts/d744c0c1.html"/>
+    <id>http://buendia1024.github.io/posts/d744c0c1.html</id>
+    <published>2023-01-30T13:26:59.000Z</published>
+    <updated>2023-02-09T10:10:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;不知道行不行啊&lt;br&gt;是还是&lt;br&gt;hsxs&lt;br&gt;实际上司机&lt;br&gt;hsjssjs&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>first</title>
+    <link href="http://buendia1024.github.io/posts/9271ee57.html"/>
+    <id>http://buendia1024.github.io/posts/9271ee57.html</id>
+    <published>2023-01-30T13:23:24.000Z</published>
+    <updated>2023-02-09T10:10:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;first text i hope it can be</summary>
+        
+      
+    
+    
+    
+    
+    <category term="nice" scheme="http://buendia1024.github.io/tags/nice/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/posts/4a17b156.html"/>
+      <url>/posts/4a17b156.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ai绘画云端教程+指定人物训练</title>
+      <link href="/posts/58eff440.html"/>
+      <url>/posts/58eff440.html</url>
+      
+        <content type="html"><![CDATA[<p>ai绘画爆火，对于非专业人士来说，相较于chatGPT，前者更具可玩性和可操作性。但普遍性存在以下问题：1.涉及编码/参数调整，专业门槛过高，导致非专业人员即使跟着教程也各种出错；2.个人设备显存太小，跑不动；3.绘制出的效果不尽人意；4.训练出指定人物程序复杂，需要大量实验和不断调整。<br>因此，本贴专门介绍云端AI绘画，跟着教程走，可以帮助大家解决其中前两个问题；讲解如何运用lora模型（就是能生成指定人物），解决后两个问题。基本上跟着我走，再自己不断实验，应该能出中低质量的成品</p><h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a><strong>声明</strong></h1><p>1.本人非专业，本贴非100%原创，很多资源和方法都学自大佬，在此向各大佬表达致谢和敬意。<br>2.使用本贴任何素材（语句文段、图片、框架、方法等）均需注明转载。<br>3.技术是客观的，法律也是客观的。切不可用技术做违法之事。由此贴所学技术产生的的任何后果均与发帖人无关。<br><font color="#FF000">请同意上述声明后继续阅读，不同意则本贴拒绝访问</font></p><h1 id="一、要素准备"><a href="#一、要素准备" class="headerlink" title="一、要素准备"></a><strong>一、要素准备</strong></h1><p>1.电脑，不卡就行，显卡最好4G及以上；<br>2.图片素材，建议大一点，多一点。（因为用的是云算力，即他人的电脑跑代码搞AI，不怕运行不起来）；<br>3.云算力。推荐autoDL平台：<a href="https://www.autodl.com/home">https://www.autodl.com/home</a> 。价格低廉。基本10元内搞定；<br>4.本地安装webUI，也就是novel。下载地址：<a href="https://pan.baidu.com/s/1tCprxK_CUdwEn80AFpLoIw%EF%BC%8C%E6%8F%90%E5%8F%96%E7%A0%81%EF%BC%9Au612">https://pan.baidu.com/s/1tCprxK_CUdwEn80AFpLoIw，提取码：u612</a><br>这个是所有AI绘画进行的前提/平台，所以开始之前务必安装好。安装包可找B站枫葉大佬，私信它sdV3，可拿度盘链接。要是你能访问github，可以找找其他版本的webUI，这是开源的。<br>5.魔法。无则也可，有则更好。</p><h1 id="二、云端生成lora模型"><a href="#二、云端生成lora模型" class="headerlink" title="二、云端生成lora模型"></a><strong>二、云端生成lora模型</strong></h1><p>1.安装webUI，解压之后点击启动器，第一次启动需要签一个协议（同意不用于违法），然后关了重进。第二次打开控制台会自动下载并配置需要的文件，安静等待即可，半小时以内。</p><p>2.素材修剪。打开webUI，会在浏览器出现操作界面，在上方一行选项卡依次点击“训练→图像预处理”，出现下图：(<a href="https://s3.bmp.ovh/imgs/2023/03/03/6e7e5ee0b9581fac.png">https://s3.bmp.ovh/imgs/2023/03/03/6e7e5ee0b9581fac.png</a>)<br>这时开始初步处理图片素材（自己准备的指定人物图片），以方便后面生产lora模型。处理好的图片和文本文件保存在新建文件夹，新建文件夹需要如此创建：“train→sucai→6_sucai”。即三个文件夹，依次下置，最后的子文件夹名称的数字可大可小，但需为2的倍数，如6，8，10。越大运行次数越多，对显存要求越大，不过咱们云算力，可以大,30以内。文件名称也可以不是“train,sucai”,自己设置，但要求英文且最后子文件夹名称按上述格式来。”train“文件夹放哪个盘都可以。（也就是说有三层文件夹，第一层是train，第二层是shuyi，第三层6_shuyi，一定要如此设置三层，不然运行失败）。如若不懂，可以去看B站视频： <a href="https://b23.tv/XJlmoSf">https://b23.tv/XJlmoSf</a></p><p>3.使用云算力生成lora模型。1）打开AutoDL官网：<a href="https://www.autodl.com.点击左上方”算力市场“,选择机器配置,我选的是rtx3090,性能杠杠滴,低一点的性能应该也可以,自己估算一下显卡性能进行选择.接下来就是注册/%E7%99%BB%E5%BD%95%EF%BC%8C%E9%80%89%E6%8B%A9%E9%95%9C%E5%83%8F%EF%BC%8C%E9%95%9C%E5%83%8F%E7%82%B9%E7%AC%AC%E4%BA%8C%E4%B8%AA%E2%80%9C%E7%AE%97%E6%B3%95%E9%95%9C%E5%83%8F%E2%80%9D%EF%BC%8C%E8%BE%93%E5%85%A5%E2%80%9Clora%E2%80%9D%EF%BC%8C%E8%87%AA%E7%84%B6%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%80%89%E9%A1%B9%EF%BC%8C%E9%80%89%E5%B0%B1%E5%AE%8C%E4%BA%8B%E4%BA%86%E3%80%82%E5%A6%82%E4%B8%8B%E5%9B%BE%EF%BC%9A(https://s3.bmp.ovh/imgs/2023/03/03/d44168b062a729f4.png)%E3%80%822%EF%BC%89%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E5%8F%B0%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE%EF%BC%9A(https://s3.bmp.ovh/imgs/2023/03/03/720b349fbbbff567.png)%E7%82%B9%E5%87%BB%E2%80%9CjupyterLab%E2%80%9D%E9%80%89%E9%A1%B9%EF%BC%8C%E7%82%B9%E5%87%BB%E4%BC%9A%E5%8F%91%E7%8E%B0lora-scripts%E6%96%87%E4%BB%B6%E5%A4%B9%E5%B7%B2%E5%AD%98%E5%9C%A8%E3%80%82%E7%82%B9%E5%87%BB%E6%89%93%E5%BC%80%EF%BC%8C%E6%8A%8A%E5%88%9A%E6%89%8D%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%88%9B%E5%BB%BA%E7%9A%84%E2%80%9Ctrain%E2%80%9D%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8A%E4%BC%A0%EF%BC%88%E5%A6%82%E6%9E%9C%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8A%E4%BC%A0%E4%B8%8D%E4%BA%86%E5%B0%B1%E5%86%8D%E6%AD%A4%E5%A4%84%E5%88%9B%E5%BB%BA%E5%A6%82%E6%AD%A5%E9%AA%A42%E4%B8%80%E8%88%AC%E7%9A%84%E4%B8%89%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E4%BE%9D%E6%AC%A1%E4%B8%8B%E7%BD%AE%E3%80%82%E7%84%B6%E5%90%8E%E5%9C%A8%E2%80%9C6_shuyi%E2%80%9C%E6%96%87%E4%BB%B6%E5%A4%B9%E5%86%85%E4%B8%8A%E4%BC%A0%E5%A4%84%E7%90%86%E5%A5%BD%E7%9A%84%E5%9B%BE%E7%89%87%E5%92%8C%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%EF%BC%89%E3%80%823%EF%BC%89%E2%80%9Dlora-scripts%E2%80%9C%E7%9B%AE%E5%BD%95%E6%89%BE%E5%88%B0%E2%80%9Dtrain.sh%E2%80%9C%E6%96%87%E4%BB%B6%EF%BC%8C%E5%8F%8C%E5%87%BB%E6%89%93%E5%BC%80%E4%BF%AE%E6%94%B9%E5%8F%82%E6%95%B0%EF%BC%8C%E5%8F%82%E6%95%B0%E4%BF%AE%E6%94%B9%E7%9C%8B%E4%B8%8A%E9%9D%A2%E9%93%BE%E6%8E%A5%E7%BB%99%E7%9A%84B%E7%AB%99%E8%A7%86%E9%A2%91%EF%BC%88%E8%A7%86%E9%A2%91%E5%BE%88%E9%95%BF%EF%BC%8C%E5%BE%88%E5%A4%9A%E4%B8%8E%E4%BA%91%E7%AB%AF%E7%BB%98%E7%94%BB%E6%97%A0%E5%85%B3%EF%BC%8C%E5%8F%AF%E7%9B%B4%E6%8E%A5%E8%B7%B3%E8%87%B3%E6%89%80%E9%9C%80%E5%86%85%E5%AE%B9%EF%BC%89%E3%80%82%E8%A7%86%E9%A2%91%E5%86%85%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%8F%82%E6%95%B0%E6%AF%94%E8%BE%83%E5%B0%8F%EF%BC%8C%E5%92%B1%E4%BB%AC%E7%94%A8%E4%BA%91%E7%AE%97%E5%8A%9B%E5%A5%BD%E6%98%BE%E5%8D%A1%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%B0%83%E5%A4%A7%E3%80%823%EF%BC%89%E7%95%8C%E9%9D%A2%E4%B8%AD%E5%8F%B3%E9%83%A8%E5%88%86%E6%9C%89%E7%BB%88%E7%AB%AF%E5%9B%BE%E6%A0%87%EF%BC%8C%E5%A6%82%E5%9B%BE%EF%BC%9A(https://s3.bmp.ovh/imgs/2023/03/03/4cddd97a987d8c57.png)">https://www.autodl.com。点击左上方”算力市场“，选择机器配置，我选的是RTX3090，性能杠杠滴，低一点的性能应该也可以，自己估算一下显卡性能进行选择。接下来就是注册/登录，选择镜像，镜像点第二个“算法镜像”，输入“lora”，自然会出现一个选项，选就完事了。如下图：(https://s3.bmp.ovh/imgs/2023/03/03/d44168b062a729f4.png)。2）进入控制台，如下图：(https://s3.bmp.ovh/imgs/2023/03/03/720b349fbbbff567.png)点击“jupyterLab”选项，点击会发现lora-scripts文件夹已存在。点击打开，把刚才在本地创建的“train”文件夹上传（如果文件夹上传不了就再此处创建如步骤2一般的三个文件夹，依次下置。然后在“6_shuyi“文件夹内上传处理好的图片和文本文件）。3）”lora-scripts“目录找到”train.sh“文件，双击打开修改参数，参数修改看上面链接给的B站视频（视频很长，很多与云端绘画无关，可直接跳至所需内容）。视频内设置的参数比较小，咱们用云算力好显卡，可以直接调大。3）界面中右部分有终端图标，如图：(https://s3.bmp.ovh/imgs/2023/03/03/4cddd97a987d8c57.png)</a> 点击打开。输入”bash train.sh“，运行代码。然后静待云端运行生成结果。</p><p>4.保存lora模型到本地。生成好的lora模型会在“output”文件夹下，一般为“safetensors”文件或“skpt”文件。将其下载并保存至本地，路径为“D:\novelAI\extensions\sd-webui-additional-networks\models\lora”，哪个盘都可以，且总目录也不一定叫”novelAI“，就是你本地安装webUI的目录。</p><p>到此为止，个人专属的lora模型就完成了，可以据此生成指定人物。</p><h1 id="三、云端生成lora模型"><a href="#三、云端生成lora模型" class="headerlink" title="三、云端生成lora模型"></a><strong>三、云端生成lora模型</strong></h1><p>此部分教程为本地操作，一般4G显卡即可完成此工作。至于用云算力完成，容我后续研究。<br>1.（魔法）访问 <a href="https://civitai.com/%E3%80%82%E5%85%B6%E4%B8%BB%E9%A1%B5%E5%A6%82%E4%B8%8B%E5%9B%BE%EF%BC%9A(https://s3.bmp.ovh/imgs/2023/03/03/045e4c8cb9f98897.png)">https://civitai.com/。其主页如下图：(https://s3.bmp.ovh/imgs/2023/03/03/045e4c8cb9f98897.png)</a></p><p>2.找到自己想要的风格/效果，点击进去并下载其模型作为底模，如下图：(<a href="https://s3.bmp.ovh/imgs/2023/03/03/dc61a7cabb350a1e.png">https://s3.bmp.ovh/imgs/2023/03/03/dc61a7cabb350a1e.png</a>) 多个版本可选，一般选最新版。下载好之后，如果你只将其当作底模（确定画风质量等），具体人物自己指定，那么就要注意两点：1）下载时一般不要选择类型为lora的资源，如下图：(<a href="https://s3.bmp.ovh/imgs/2023/03/03/52ed2dd260a45bbc.png">https://s3.bmp.ovh/imgs/2023/03/03/52ed2dd260a45bbc.png</a>) 而是使用自己的lora模型（即自己在云端生成的）；2）底模下载之后放置到D:\novelAI\models\Stable-diffusion路径（还是那句话，哪个盘任意，novelAI文件名任意）。</p><p>3.模型选择。本地运行webUI，在文生图界面左上角”Stable Diffusion 模型(ckpt)“选项卡中选择自己想要的底模，即上一步在civitai网站下载的。模型的 VAE (SD VAE)”选项卡选择“同名/无”都可以。文生图的tag（即关键词/不需要的词）可以直接照抄civitai网站，参数设置也可以照抄或做稍微改动。如下图：(<a href="https://s3.bmp.ovh/imgs/2023/03/03/a2c75b4aeb0e908b.png">https://s3.bmp.ovh/imgs/2023/03/03/a2c75b4aeb0e908b.png</a>) 要想生成指定任务注意必须勾选lora插件，如下图：(<a href="https://s3.bmp.ovh/imgs/2023/03/03/6d03da3a221f174c.png">https://s3.bmp.ovh/imgs/2023/03/03/6d03da3a221f174c.png</a>) 云端生成的lora模型。云端生成的lora有多个，选择没有数字前缀、最均衡的那个就行。或者你也可以一个一个试，看那个最像本人。lora权重不是越高越好，0.5-0.7，一般0.6，0.6就挺好。如果选项中没有自己的lora模型，可以重启UI。</p><p>4.生成绘画。右上方选择”生成“按钮，等待即可。最后保存并打开观看效果。</p><p>以上就是所有内容：云端生成lora模型+本地AI绘画。是本人亲身实践觉得适合小白入门的比较便捷比较清晰的操作指南，学会后基本可入门，剩下的就是不断尝试插件、模型、大量的实验。</p><h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a><strong>写在最后</strong></h1><p>再次鸣谢各位大佬。<strong>其视频/文章链接</strong>统一放置如下：<br>1.webUI资源（即ai绘画软件/平台）<iframe src="//player.bilibili.com/player.html?aid=389684668&amp;bvid=BV17d4y1C73R&amp;cid=879308929&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><br>2.lora模型素材处理、文件路径、参数调整。<iframe src="//player.bilibili.com/player.html?aid=948252718&amp;bvid=BV1fs4y1x7p2&amp;cid=977557682&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>（视频中的本地训练lora部分可忽略）<br>3.civitai网站资源保存路径及ai绘画入门教程。<iframe src="//player.bilibili.com/player.html?aid=389684668&amp;bvid=BV17d4y1C73R&amp;cid=879308929&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></p><p>本人作品涉及个人肖像隐私，故不在此处展示。读者若完成好的作品可在下方评论，我必观赏。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ai绘画； 云算力； lora模型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>再试一次</title>
+      <link href="/posts/26082041.html"/>
+      <url>/posts/26082041.html</url>
+      
+        <content type="html"><![CDATA[<p>修改主题，配置主题之后，更换格言之后再试一次<br>一直有误，不知道哪里出问题了</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我如同夜晚盛开的烟火</title>
+      <link href="/posts/e63d0e67.html"/>
+      <url>/posts/e63d0e67.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://s3.bmp.ovh/imgs/2023/02/09/5a52ce78e3848e70.jpg" alt="2023年1月26日"></p><p>想在清晨下一场突如其来的雪，</p><p>雪花萤火般在雾气里闪烁明灭。</p><p>我如同夜晚盛开的烟火，</p><p>在白色世界中惊奇炙烈。</p><p>寒风中的枯坐和久立，</p><p>为你分享爆炸的一刹那。</p><p>此刻爱意蒸腾，</p><p>如同冰魄般清澈、决绝。</p><p>在每一片雪花落下时，</p><p>我思念你，久久伫立。</p><p>想在清晨告知你一整个深冬的好消息，</p><p>——绵绵、喋喋。</p><p>特别鸣谢： Mr Hu</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 转载 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>中文测试text</title>
+      <link href="/posts/d744c0c1.html"/>
+      <url>/posts/d744c0c1.html</url>
+      
+        <content type="html"><![CDATA[<p>不知道行不行啊<br>是还是<br>hsxs<br>实际上司机<br>hsjssjs</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>first</title>
+      <link href="/posts/9271ee57.html"/>
+      <url>/posts/9271ee57.html</url>
+      
+        <content type="html"><![CDATA[<p>first text i hope it can be cuccessful</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> nice </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
